@@ -2,20 +2,7 @@ import java.util.Scanner;
 
 public class task7 {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        double p, y;
-        int r;
-
-        System.out.print("Enter Price amount: ");
-        p = sc.nextDouble();
-
-        System.out.print("Enter rate: ");
-        r = sc.nextInt();
-
-        System.out.print("Enter y: ");
-        y = sc.nextDouble();
-
+    public static void calculateLoad(double p, int r, double y) {
         double m_r = (double) r / (12 * 100);
         int m = (int) (y * 12);
 
@@ -51,5 +38,22 @@ public class task7 {
 
             System.out.printf("%-10d%-12.2f%-12.2f%-12.2f\n", i, interest, p_pay, balance);
         }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double p, y;
+        int r;
+
+        System.out.print("Enter Price amount: ");
+        p = sc.nextDouble();
+
+        System.out.print("Enter rate: ");
+        r = sc.nextInt();
+
+        System.out.print("Enter y: ");
+        y = sc.nextDouble();
+
+        calculateLoad(p, r, y);
     }
 }
